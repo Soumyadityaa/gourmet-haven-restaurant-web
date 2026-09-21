@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Gourmet Haven</title>
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    
+    <!-- JavaScript Files -->
+    <script src="js/main.js" defer></script>
+    <script src="js/gallery.js" defer></script>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-utensils"></i> Gourmet Haven
+            </a>
+            
+            <nav>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="menu.html" class="nav-link">Menu</a></li>
+                    <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button id="hamburger-menu" class="hamburger" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            
+            <div class="gallery-header">
+                <h1 class="section-title">Our Gallery</h1>
+                <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto;">Explore the visual journey of Gourmet Haven. From our carefully crafted dishes to the warm, inviting atmosphere of our dining room.</p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="All">All</button>
+                <button class="filter-btn" data-filter="Restaurant Ambiance">Restaurant Ambiance</button>
+                <button class="filter-btn" data-filter="Dishes">Dishes</button>
+                <button class="filter-btn" data-filter="Thali">Thali</button>
+                <button class="filter-btn" data-filter="Achievements">Achievements</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid" id="gallery-grid">
+                
+                <!-- Gallery Item 1: Thali -->
+                <div class="gallery-item" data-category="Thali">
+                    <img src="img/thali.jpg" alt="Grand Maharaja Thali Spread" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2: Ambiance -->
+                <div class="gallery-item" data-category="Restaurant Ambiance">
+                    <!-- Placeholder acting as an image for demonstration -->
+                    <div style="width: 100%; height: 100%; background-color: #2c2c2c; display:flex; align-items:center; justify-content:center;">
+                        <i class="fas fa-chair fa-3x" style="color: #555;"></i>
+                    </div>
+                    <!-- Hidden actual img tag for the JS Lightbox to read src -->
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Elegant Dining Interior" class="gallery-img" style="display: none;">
+                    
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3: Dishes -->
+                <div class="gallery-item" data-category="Dishes">
+                    <div style="width: 100%; height: 100%; background-color: #2c2c2c; display:flex; align-items:center; justify-content:center;">
+                        <i class="fas fa-drumstick-bite fa-3x" style="color: #555;"></i>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=800&q=80" alt="Signature Chicken Dish" class="gallery-img" style="display: none;">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4: Achievements -->
+                <div class="gallery-item" data-category="Achievements">
+                    <div style="width: 100%; height: 100%; background-color: #2c2c2c; display:flex; align-items:center; justify-content:center;">
+                        <i class="fas fa-award fa-3x" style="color: #555;"></i>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=800&q=80" alt="Best New Restaurant Award 2022" class="gallery-img" style="display: none;">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 5: Ambiance -->
+                <div class="gallery-item" data-category="Restaurant Ambiance">
+                    <div style="width: 100%; height: 100%; background-color: #2c2c2c; display:flex; align-items:center; justify-content:center;">
+                        <i class="fas fa-wine-glass fa-3x" style="color: #555;"></i>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=800&q=80" alt="Cocktail Bar Area" class="gallery-img" style="display: none;">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 6: Dishes -->
+                <div class="gallery-item" data-category="Dishes">
+                    <div style="width: 100%; height: 100%; background-color: #2c2c2c; display:flex; align-items:center; justify-content:center;">
+                        <i class="fas fa-bowl-rice fa-3x" style="color: #555;"></i>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1589302168068-964664d93cb0?auto=format&fit=crop&w=800&q=80" alt="Authentic Biryani" class="gallery-img" style="display: none;">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 7: Thali -->
+                <div class="gallery-item" data-category="Thali">
+                    <div style="width: 100%; height: 100%; background-color: #2c2c2c; display:flex; align-items:center; justify-content:center;">
+                        <i class="fas fa-utensils fa-3x" style="color: #555;"></i>
+                    </div>
+                    <img src="thali.jpg" alt="Premium Seafood Thali" class="gallery-img" style="display: none;">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 8: Dishes -->
+                <div class="gallery-item" data-category="Dishes">
+                    <div style="width: 100%; height: 100%; background-color: #2c2c2c; display:flex; align-items:center; justify-content:center;">
+                        <i class="fas fa-fish fa-3x" style="color: #555;"></i>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1544025162-8111142154d2?auto=format&fit=crop&w=800&q=80" alt="Grilled Fish Fillet" class="gallery-img" style="display: none;">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox-modal" id="lightbox">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Close Lightbox">&times;</button>
+        <img src="" alt="Gallery Preview" class="lightbox-content" id="lightbox-img">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="grid footer-grid">
+                <div>
+                    <h3 class="footer-title">Gourmet Haven</h3>
+                    <p style="color: #b3b3b3; font-size: 0.9rem;">Authentic flavors, modern presentation. Establishing culinary excellence since 2021.</p>
+                </div>
+                <div>
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="menu.html">Our Menu</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer-title">Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-map-marker-alt" style="width: 20px; color: var(--accent-primary);"></i> 123 Culinary Lane, Metropolis</a></li>
+                        <li><a href="#"><i class="fas fa-phone" style="width: 20px; color: var(--accent-primary);"></i> +1 (555) 123-4567</a></li>
+                        <li><a href="#"><i class="fas fa-envelope" style="width: 20px; color: var(--accent-primary);"></i> info@gourmethaven.com</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer-title">Opening Hours</h3>
+                    <ul class="footer-links">
+                        <li>Monday - Sunday</li>
+                        <li>11:00 AM - 11:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Gourmet Haven. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Fixed WhatsApp Button -->
+    <a href="https://wa.me/YOUR_PHONE_NUMBER" target="_blank" class="whatsapp-float" aria-label="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+</body>
+</html>

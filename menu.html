@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | Gourmet Haven</title>
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
+    
+    <!-- JavaScript Files -->
+    <script src="js/main.js" defer></script>
+    <script src="js/menu.js" defer></script>
+</head>
+<body>
+
+    <!-- Header & Navigation (Consistent with global design) -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-utensils"></i> Gourmet Haven
+            </a>
+            
+            <nav>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="menu.html" class="nav-link active">Menu</a></li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button id="hamburger-menu" class="hamburger" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            
+            <!-- Special Highlight Card -->
+            <section class="special-highlight">
+                <div class="special-image">
+                    <i class="fas fa-crown fa-5x" style="color: var(--accent-primary);"></i>
+                </div>
+                <div class="special-content">
+                    <h2 class="special-title">Grand Maharaja Thali</h2>
+                    <p class="special-description">Experience the ultimate royal feast. A premium multicourse selection featuring our finest curries, signature biryani, assorted artisan breads, premium appetizers, and decadent traditional desserts served on a majestic platter.</p>
+                    <div class="special-price">$85.00</div>
+                    <button class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Pre-Order Now</button>
+                </div>
+            </section>
+
+            <!-- Menu Controls: Search & Filtering -->
+            <section class="menu-controls">
+                <div class="search-bar">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" id="menu-search" class="search-input" placeholder="Search by dish name or ingredient (e.g., chicken, vegan)...">
+                </div>
+                
+                <div class="category-tabs">
+                    <button class="tab-btn active" data-category="All">All Menu</button>
+                    <button class="tab-btn" data-category="Dishes">Main Dishes</button>
+                    <button class="tab-btn" data-category="Food & Beverage">Food & Beverage</button>
+                    <button class="tab-btn" data-category="Desserts">Desserts</button>
+                </div>
+            </section>
+
+            <!-- Dynamic Menu Grid Container -->
+            <section id="menu-grid" class="menu-grid">
+                <!-- JavaScript will populate items here -->
+            </section>
+
+            <!-- Pagination Container -->
+            <div id="pagination" class="pagination" style="margin-bottom: 5rem;">
+                <!-- JavaScript will populate pagination controls here -->
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer (Consistent with global design) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="grid footer-grid">
+                <div>
+                    <h3 class="footer-title">Gourmet Haven</h3>
+                    <p style="color: #b3b3b3; font-size: 0.9rem;">Authentic flavors, modern presentation. Establishing culinary excellence since 2021.</p>
+                </div>
+                <div>
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="menu.html">Our Menu</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer-title">Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-map-marker-alt" style="width: 20px; color: var(--accent-primary);"></i> 123 Culinary Lane, Metropolis</a></li>
+                        <li><a href="#"><i class="fas fa-phone" style="width: 20px; color: var(--accent-primary);"></i> +1 (555) 123-4567</a></li>
+                        <li><a href="#"><i class="fas fa-envelope" style="width: 20px; color: var(--accent-primary);"></i> info@gourmethaven.com</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer-title">Opening Hours</h3>
+                    <ul class="footer-links">
+                        <li>Monday - Sunday</li>
+                        <li>11:00 AM - 11:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Gourmet Haven. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Fixed WhatsApp Button -->
+    <a href="https://wa.me/YOUR_PHONE_NUMBER" target="_blank" class="whatsapp-float" aria-label="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+</body>
+</html>
